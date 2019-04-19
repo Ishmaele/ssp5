@@ -75,6 +75,5 @@ public class Main
         System.out.println("Криптограмма: " + en);
         System.out.println("Расшифровка: " + doDecryption(en));
         sc.close();
-
     }
 }
