@@ -9,17 +9,13 @@ public class Main
             'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
             'w', 'x', 'y', 'z', '*' };
 
-
     public static char ch[] = new char[26];
-
 
    // public static char ch[] = { 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O',
      //       'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C',
        //     'V', 'B', 'N', 'M'};
 
-
-
-    public static String doEncryption(String s)
+    public static String Encryption(String s)
     {
         char c[] = new char[(s.length())];
         for (int i = 0; i < s.length(); i++)
@@ -41,7 +37,7 @@ public class Main
         return (new String(c));
     }
 
-    public static String doDecryption(String s)
+    public static String Decryption(String s)
     {
         char p1[] = new char[(s.length())];
         for (int i = 0; i < s.length(); i++)
@@ -71,9 +67,9 @@ public class Main
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Ввод сообщения: ");
-        String en = doEncryption(sc.nextLine().toLowerCase());
+        String en = Encryption(sc.nextLine().toLowerCase());
         System.out.println("Криптограмма: " + en);
-        System.out.println("Расшифровка: " + doDecryption(en));
+        System.out.println("Расшифровка: " + Decryption(en));
         sc.close();
     }
 }
